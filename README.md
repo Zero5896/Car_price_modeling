@@ -1,53 +1,59 @@
 # Car Price Modeling and Analysis
 
 ## Description
-This project is about testing my Data Science and Machine Learning skills through a Kaggle dataframe [insert link]. The main goal is to answer questions posed on Kaggle and assess how good the dataframe is and how usable it can be for users.
 
-## Dataset Description
-The dataset, obtained from Kaggle, contains information on various car features, including:
-- **Brand**: The manufacturer of the car
-- **Year**: The year the car was manufactured
-- **Engine Size**: The size of the engine in liters
-- **Fuel Type**: The type of fuel used by the car (e.g., Petrol, Diesel, Electric, Hybrid)
-- **Transmission**: The type of transmission (e.g., Manual, Automatic)
-- **Mileage**: The distance the car has traveled
-- **Condition**: The condition of the car (e.g., New, Used, Like New)
-- **Price**: The market price of the car
-- **Model**: The specific model of the car
+This project is about testing my Data Science and Machine Learning skills through a Kaggle data set [https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data]. The main goal is to answer questions posed on Kaggle and assess how good the dataframe is and how usable it can be for users.
 
-## Technologies Used
-- Python
-- Pandas
-- Scikit-learn (Linear Regression, Decision Trees, Random Forests, Neural Networks)
-- Matplotlib
-- Seaborn
+## Table of Contents
 
-## Installation Instructions
-To run this project, ensure you have Python installed. You can set up your environment and install the necessary packages using the following command:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+In Machine Learning and A.I., the effective use of data handling and modeling is crucial. A well-structured approach to these steps can lead to impressive results.
+
+This project explores how various features, such as price, model, condition, mileage, engine size, and year, influence car prices. Through this exercise, I aim to:
+- Build predictive models using the data.
+- Answer key questions about car pricing trends.
+- Test the quality and usability of the dataset.
+
+Some features in the dataset include: Price, Model, Condition, Mileage, Engine Size, and Year.
+
+**Analysis so far:**
+- Data exploration is pending and will be updated.
+
+## Features
+
+- Data Analysis and Understanding
+- Modeling:
+  - Linear Regression
+  - Decision Trees
+  - Random Forest
+  - XGBoost
+  - Neural Networks
+
+## Installation
+
+## Installation
+
+Follow these steps to set up the project:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Zero5896/Car_price_modeling/edit/main/README.md
+
+# Navigate to the project directory
+cd yourrepository
+
+# Install the necessary dependencies
 pip install -r requirements.txt
 ```
 
-## Results
+## Contributing
+Feel free to contribute! Please fork the repository and submit a pull request. You can also open an issue if you find a bug or have a suggestion.
 
-### pending
-
-```python
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
-```
-# Split the data
-X = data.drop(columns=['Price'])
-y = data['Price']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
-# Train and evaluate a model
-from sklearn.linear_model import LinearRegression
-
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
-
-rmse = mean_squared_error(y_test, y_pred, squared=False)
-print(f'RMSE of Linear Regression: {rmse}')
