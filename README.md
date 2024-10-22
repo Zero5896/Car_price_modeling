@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is about testing my Data Science and Machine Learning skills through a car dataset from Kaggle[https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data]. The main goal is to answer questions posed on Kaggle and assess how good the dataframe is and how usable it can be for users.
+This project is about testing my Data Science and Machine Learning skills through a  [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer questions posed on Kaggle and assess how good the dataframe is and how usable it can be for users.
 
 ## Table of Contents
 
