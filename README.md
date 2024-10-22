@@ -2,14 +2,14 @@
 
 ## Description
 
-This project is about testing my Data Science and Machine Learning skills through a  [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer questions posed on Kaggle and assess how good the dataframe is and how usable it can be for users.
+This project tests my Data Science and Machine Learning skills using a [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer pricing-related questions posed by the dataset, assess its quality, and evaluate how useful it can be for building predictive models.
+
 
 ## Table of Contents
-
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Challenges & Learnings](#challenges-learnings)  
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -21,8 +21,6 @@ This project explores how various features, such as price, model, condition, mil
 - Build predictive models using the data.
 - Answer key questions about car pricing trends.
 - Test the quality and usability of the dataset.
-
-Some features in the dataset include: Price, Model, Condition, Mileage, Engine Size, and Year.
 
 **Analysis so far:**
 - Data exploration is pending and will be updated.
@@ -52,6 +50,15 @@ cd yourrepository
 # Install the necessary dependencies
 pip install -r requirements.txt
 ```
+
+## Challenges & Learnings
+
+
+1. **Handling Missing Data**: ...
+2. **Model Performance Issues with Linear Regression**: ...
+3. **Overfitting with Neural Networks**: ...
+
+This project helped me solidify my understanding of data preprocessing, model evaluation, and how to troubleshoot common machine learning problems.
 
 ## Contributing
 Feel free to contribute! Please fork the repository and submit a pull request. You can also open an issue if you find a bug or have a suggestion.
