@@ -1,6 +1,6 @@
 # Car Price Modeling and Analysis
 
-![Alt text](https://rpmtechnik.co.uk/wp-content/uploads/porsche-930-turbo.jpg)
+<img src="https://rpmtechnik.co.uk/wp-content/uploads/porsche-930-turbo.jpg" alt="Cool Porsche 930 Turbo" width="350" height="200"/>
 
 
 ## Description
@@ -12,7 +12,7 @@ This project tests my Data Science and Machine Learning skills using a [car data
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Challenges & Learnings](#challenges-learnings)  
+- [Challenges and Learnings](#challenges-and-learnings)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -54,12 +54,12 @@ cd yourrepository
 pip install -r requirements.txt
 ```
 
-## Challenges & Learnings
+## Challenges and Learnings
 
 
-1. **Handling Missing Data**: ...
+1. ****: ...
 2. **Model Performance Issues with Linear Regression**: ...
-3. **Overfitting with Neural Networks**: ...
+3. **Neural Networks**: ...
 
 This project helped me solidify my understanding of data preprocessing, model evaluation, and how to troubleshoot common machine learning problems.
 
