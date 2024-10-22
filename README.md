@@ -1,5 +1,8 @@
 # Car Price Modeling and Analysis
 
+![Alt text](https://rpmtechnik.co.uk/wp-content/uploads/porsche-930-turbo.jpg)
+
+
 ## Description
 
 This project tests my Data Science and Machine Learning skills using a [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer pricing-related questions posed by the dataset, assess its quality, and evaluate how useful it can be for building predictive models.
