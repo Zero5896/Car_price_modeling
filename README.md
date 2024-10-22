@@ -37,7 +37,6 @@ Some features in the dataset include: Price, Model, Condition, Mileage, Engine S
   - XGBoost
   - Neural Networks
 
-## Installation
 
 ## Installation
 
@@ -57,3 +56,6 @@ pip install -r requirements.txt
 ## Contributing
 Feel free to contribute! Please fork the repository and submit a pull request. You can also open an issue if you find a bug or have a suggestion.
 
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
