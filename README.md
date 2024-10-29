@@ -27,7 +27,7 @@ This project explores how various features, such as price, model, condition, mil
 
 **Analysis:**
 - For this section I'll be answering the questions the dataset proposes
-**Part 1 Understanding the Features**
+### **Part 1 Understanding the Features**
 
  **Brand and Model: Analyze how different brands and models influence car prices. Are luxury brands significantly more expensive than economy brands?**
 
@@ -103,7 +103,7 @@ plt.title('Boxplot of Car Prices by Transmission')
 ```
 ![Transmission Comparison](results/TransmissionComparison.png)
 
-**Part 2 prediction and modeling**
+### **Part 2 prediction and modeling**
  **Machine Learning Models: Explore which models (e.g., linear regression, decision trees, or ensemble methods) are best suited for predicting car prices using this dataset.**
 - The models did terribly due to the lack of correlation between the data, this is where I learned about using tags and one-hot-encoding for each model, for this exersice I did the following models with their respective metrics, for this work i used RMSE, MSE, R² and Mae.
 
@@ -151,6 +151,81 @@ plt.tight_layout()  # Adjust layout to prevent clipping of tick-labels
 plt.show()
 ```
 ![Important Features](results/ImportantFeatures.png)
+
+### **Part 3 Market Trends and Insights**
+
+**Price Distribution: Analyze the distribution of car prices. Are there a lot of high-priced luxury cars, or is the dataset skewed towards more affordable options?**
+- As there was no way to accurately know which car was Luxury due to non-Luxury brands having Luxury models, I decided to make a new column and manually add which one was Luxury.
+
+```Python
+# Get unique models
+unique_models = df['Model'].unique()
+
+# Print each model
+for model in unique_models:
+    print(model)
+```
+Output:
+Model X
+5 Series
+A4
+Model Y
+Mustang
+Q7
+Q5
+Civic
+Explorer
+Model 3
+Fiesta
+X3
+GLA
+A3
+X5
+C-Class
+E-Class
+CR-V
+Camry
+Accord
+GLC
+Corolla
+Fit
+Model S
+Prius
+3 Series
+RAV4
+Focus
+- Then I added them manually
+```Python
+# List of luxury models
+luxury_models = ['Model X', 'Model S', '5 Series', 'A4', 'Q7', 'Q5', 
+                 'C-Class', 'E-Class', 'X3', 'GLA', 'X5', 'Q8', 
+                 'A8', 'Porsche 911', 'Lexus ES', 'Tesla Model 3', 
+                 'Civic Type R', 'Accord Sport', 'Mustang GT']  # Add more as needed
+
+# Create a new column 'Luxury' based on the model
+df['Luxury'] = df['Model'].apply(lambda x: 'Yes' if x in luxury_models else 'No')
+# Set the figure size
+plt.figure(figsize=(16, 6))
+
+# Create a boxplot to compare price distributions
+sns.boxplot(data=df, x='Luxury', y='Price', palette={'Yes': 'gold', 'No': 'lightblue'})
+plt.title('Price Distribution of Luxury vs. Non-Luxury Cars')
+plt.xlabel('Luxury Status')
+plt.ylabel('Price')
+
+# Show the plot
+plt.show()
+plt.savefig("results/LuxuryComparison.png")
+```
+![Luxury Comparison](results/LuxuryComparison.png)
+
+- I see no significant difference, so no, it doesn't seem to be skewed.
+
+
+**Mileage vs. Price: Investigate the correlation between mileage and price. How does higher mileage affect pricing, and is there a threshold where price reduction becomes significant?**
+- 
+**Condition Impact: Discuss how the condition of the car (New, Used, Like New) influences the price. Are there significant price drops for used cars compared to new ones?**
+- 
 
 ## Features
 
