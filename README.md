@@ -312,6 +312,9 @@ pip install -r requirements.txt
 
 ### **Part 7 Potential Applications**
 
+**Pricing Strategies: How can dealerships or private sellers utilize insights from this dataset to set competitive pricing?**
+**Consumer Decision-Making: Discuss how consumers can leverage this dataset to make informed purchasing decisions based on price predictions and feature evaluations.**
+
 ## Challenges and Learnings
 
 1. **Patience**: This project taught me the importance of problem-solving and that sometimes you need to let a problem rest and return with a fresh perspective.
