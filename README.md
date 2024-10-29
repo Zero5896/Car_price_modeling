@@ -26,7 +26,131 @@ This project explores how various features, such as price, model, condition, mil
 - Test the quality and usability of the dataset.
 
 **Analysis so far:**
-- Data exploration is pending and will be updated.
+For this section I'll be answering the questions the dataset proposes
+**Part 1 Understanding the Features**
+
+- **Brand and Model: Analyze how different brands and models influence car prices. Are luxury brands significantly more expensive than economy brands?**
+
+It´s counterintuitive, but the difference between car prices alongside brands seem very close; Tesla, Ford and Mercedes the highest and the lowest prices, though BMW seems to have on avarage te highest prices
+```Python
+# Set the width and height of the figure
+plt.figure(figsize=(16, 6))
+sns.boxplot(data=df, x='Model', y='Price', hue='Brand')
+plt.title('Boxplot of Car Prices by Model and Brand')
+plt.xticks(rotation=90)  # Rotate x-axis labels if there are many models
+```
+
+![Brand Comparison](results/ModelPriceComparison.png)
+```Python
+# Set the width and height of the figure
+plt.figure(figsize=(16,6))
+sns.boxplot(df, y='Price', hue='Brand')
+plt.title('Boxplot of Car Prices by Brand')
+plt. savefig("results/BrandComparison.png")
+
+```
+
+![Brand Comparison](results/BrandComparison.png)
+
+
+- **Year of Manufacture: Discuss the depreciation of car prices over time. How does the year affect pricing, and are there notable trends for specific brands?**
+
+Not really as it seems below, the prices have consident ups and downs, cases like Toyota that has the lowest price at early 2010s recovered its price the following years.
+```Python
+plt.figure(figsize=(16, 6))
+sns.lineplot(data=df, x='Year', y='Price', hue='Brand', estimator='mean')
+plt.title('Average Car Price Depreciation Over Time by Brand')
+plt.xlabel('Year of Manufacture')
+plt.ylabel('Average Price')
+```
+
+![Year Comparison](results/AvgDepreciationByYear.png)
+- **Engine Size: Explore the relationship between engine size and price. Does a larger engine correlate with a higher price, and how does this vary across different fuel types?**
+
+The difference below indicates that theres not much significant changes in price througought and correlation with engine size 
+```Python
+plt.figure(figsize=(16, 6))
+sns.lmplot(data=df, x='Engine Size', y='Price', hue='Fuel Type', aspect=2, height=6)
+plt.title('Price vs. Engine Size with Trend Lines by Fuel Type')
+```
+
+
+![Engine size Comparison](results/EngineSizePriceTrendByFuelType.png)
+
+- **Fuel Type: Evaluate how fuel types (Petrol, Diesel, Electric, Hybrid) impact pricing. Are electric vehicles priced higher due to their technology, or do they vary based on other factors?**
+
+Apparently not so much, as seem on the boxplot I made it seems like Diesel has the highest price amongst; Electric, Hybrid and Petrol, also Hybrid and Petrol seem pretty high, but it doesnt seem a significant difference
+
+There´s no aparent difference on the Box plot
+```Python
+# Set the width and height of the figure
+plt.figure(figsize=(16,6))
+sns.boxplot(df, y='Price', hue='Fuel Type')
+plt.title('Boxplot of Car Prices by Fuel Type')
+```
+
+![Price by Fuel Comparison](results/PriceByFuelType.png)
+
+
+- **Transmission: Discuss if manual or automatic transmissions affect car pricing, especially in different markets or demographics.**
+
+There´s no aparent difference on the Box plot
+```Python
+# Set the width and height of the figure
+plt.figure(figsize=(16,6))
+sns.boxplot(df, y='Price', hue='Transmission')
+plt.title('Boxplot of Car Prices by Transmission')
+```
+![Transmission Comparison](results/TransmissionComparison.png)
+
+**Part 2 prediction and modeling**
+- **Machine Learning Models: Explore which models (e.g., linear regression, decision trees, or ensemble methods) are best suited for predicting car prices using this dataset.**
+The models did terribly due to the lack of correlation between the data, this is where I learned about using tags and one-hot-encoding for each model, for this exersice I did the following models with their respective metrics, for this work i used RMSE, MSE, R² and Mae.
+
+- Linear Regression:
+RMSE: 27828.565634151106,
+MSE: 774429065.254256
+R²: -0.022738580424332522
+Mean Absolute Error on test data: 24051.70
+- Desicion Trees:
+RMSE: 38548.46
+R²: -0.89
+Mean Absolute Error on test data: 31697.27
+- Random Forest
+RMSE: 38548.46
+R²: -0.89
+Mean Absolute Error on test data: 31697.27
+- XGBoost
+Mean Absolute Error: 25620.73
+Root Mean Squared Error: 30973.23
+R² Score: -0.23
+- Neural Networks
+Mean Absolute Error: 52408.90
+Root Mean Squared Error: 59411.30
+R² Score: -3.51
+
+The modeling as you can see isnt very good, so my first impressions are that this dataset is not optimal for modeling, but yet, somewhat good to finding some features at best
+
+- **Feature Importance: Discuss the importance of different features in predicting price. Which features contribute most to the price prediction accuracy, and how can feature selection improve the model?**
+
+From analysis i wouldn't be able to understand the most important features, but XGBoost gave me the necessary tools to troubleshoot and understand what are the most important features in the data set, being Mileage, Year and Engine Size this is very telling, though I was only able to reach this answer thanks to modeling which wasnt very good
+
+```Python
+plt.figure(figsize=(10, 18))  # Set the figure size
+
+# Plot importance
+xgb.plot_importance(xgb_model, 
+                    importance_type='weight',  # You can choose 'weight', 'gain', or 'cover'
+                    max_num_features=20,  # Show only the top 20 features
+                    title='Feature Importance',
+                    xlabel='F score',
+                    ylabel='Features',
+                    color='skyblue')
+
+plt.tight_layout()  # Adjust layout to prevent clipping of tick-labels
+plt.show()
+```
+![Important Features](results/ImportantFeatures.png)
 
 ## Features
 
