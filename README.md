@@ -108,26 +108,36 @@ plt.title('Boxplot of Car Prices by Transmission')
 - The models did terribly due to the lack of correlation between the data, this is where I learned about using tags and one-hot-encoding for each model, for this exersice I did the following models with their respective metrics, for this work i used RMSE, MSE, R² and Mae.
 
 - Linear Regression:
+```
 RMSE: 27828.565634151106,
 MSE: 774429065.254256
 R²: -0.022738580424332522
 Mean Absolute Error on test data: 24051.70
+```
 - Desicion Trees:
+```
 RMSE: 38548.46
 R²: -0.89
 Mean Absolute Error on test data: 31697.27
+```
 - Random Forest
+```
 RMSE: 38548.46
 R²: -0.89
 Mean Absolute Error on test data: 31697.27
+```
 - XGBoost
+```
 Mean Absolute Error: 25620.73
 Root Mean Squared Error: 30973.23
 R² Score: -0.23
+```
 - Neural Networks
+```
 Mean Absolute Error: 52408.90
 Root Mean Squared Error: 59411.30
 R² Score: -3.51
+```
 
 - The modeling as you can see isnt very good, so my first impressions are that this dataset is not optimal for modeling, but yet, somewhat good to finding some features at best
 
@@ -165,9 +175,8 @@ unique_models = df['Model'].unique()
 for model in unique_models:
     print(model)
 ```
-```
 Output:
-
+```
 Model X
 5 Series
 A4
@@ -227,9 +236,36 @@ plt.savefig("results/LuxuryComparison.png")
 
 **Mileage vs. Price: Investigate the correlation between mileage and price. How does higher mileage affect pricing, and is there a threshold where price reduction becomes significant?**
 - 
+```python
+plt.figure(figsize=(10, 6))
+
+# Scatter plot with regression line
+sns.regplot(x=df['Mileage'], y=df['Price'], scatter_kws={'alpha':0.5}, line_kws={"color":"red"})
+plt.title('Mileage vs. Price')
+plt.xlabel('Mileage (e.g., km or miles)')
+plt.ylabel('Price (e.g., currency)')
+plt.axvline(x=100000, color='gray', linestyle='--', label='Mileage Threshold (100,000 km)')  # Example threshold
+plt.legend()
+
+plt.savefig("results/mileagevsprice.png")
+plt.show()
+
+```
+
+
+![Mileage vs Price](results/mileagevsprice.png)
+
 **Condition Impact: Discuss how the condition of the car (New, Used, Like New) influences the price. Are there significant price drops for used cars compared to new ones?**
 - 
+```python
+# Set the width and height of the figure
+plt.figure(figsize=(16,6))
+sns.boxplot(df, y='Price', hue='Condition')
+plt.title('Boxplot of Car Prices by Condition')
+plt.savefig("results/pricesbycondition.png")
+```
 
+![Prices by condition](pricesbycondition.png)
 ## Features
 
 - Data Analysis and Understanding
@@ -267,6 +303,7 @@ pip install -r requirements.txt
 4. **Value of Visuals and Code in README**: Including images, code snippets, and examples in the README proved beneficial for my understanding and could enhance clarity for others as well.
 
 5. **Introduction to XGBoost**: I started this project with limited knowledge of XGBoost. Frustrated by the lack of success with initial modeling techniques, I learned XGBoost to troubleshoot. Although it didn't solve my issues, I gained a valuable new technique for my toolkit.
+6. **Manually preprocess and handle the dateset**: For some problems I did manually encode variables and assigned Luxury Value to each model, due to Non-Luxury Brands having Luxury models that could be misleading.
 
 This project helped me solidify my understanding of data preprocessing, model evaluation, and how to troubleshoot common machine learning problems.
 
