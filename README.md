@@ -265,7 +265,7 @@ plt.title('Boxplot of Car Prices by Condition')
 plt.savefig("results/pricesbycondition.png")
 ```
 
-![Prices by condition](pricesbycondition.png)
+![Prices by condition](results/pricesbycondition.png)
 ## Features
 
 - Data Analysis and Understanding
