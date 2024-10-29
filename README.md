@@ -165,7 +165,9 @@ unique_models = df['Model'].unique()
 for model in unique_models:
     print(model)
 ```
+```
 Output:
+
 Model X
 5 Series
 A4
@@ -194,6 +196,7 @@ Prius
 3 Series
 RAV4
 Focus
+```
 - Then I added them manually
 ```Python
 # List of luxury models
