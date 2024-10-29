@@ -266,6 +266,28 @@ plt.title('Boxplot of Car Prices by Condition')
 plt.savefig("results/pricesbycondition.png")
 ```
 
+### **Part 4 Regional Analysis**
+- (In this database theres no regional data)
+
+### **Part 5 Regional Analysis**
+
+**Electric Vehicle Market: With the rise of electric vehicles, discuss how this dataset reflects the growing demand and pricing trends for EVs compared to traditional fuel cars.**
+
+
+**Impact of Technology: Consider how advancements in technology, safety features, and autonomous driving capabilities might influence future pricing.**
+
+
+### **Part 6  Limitations of the Dataset**
+**Data Completeness: Discuss any potential limitations in the dataset, such as missing values or biases in the data collection process.**
+
+
+**Generalization: Reflect on the ability to generalize the findings from this dataset to broader car markets or regions. Are there potential confounding factors that should be considered?**
+
+### **Part 7 Potential Applications**
+
+**Pricing Strategies: How can dealerships or private sellers utilize insights from this dataset to set competitive pricing?**
+**Consumer Decision-Making: Discuss how consumers can leverage this dataset to make informed purchasing decisions based on price predictions and feature evaluations.**
+
 ![Prices by condition](results/pricesbycondition.png)
 ## Features
 
@@ -293,27 +315,7 @@ cd Car_price_modeling
 pip install -r requirements.txt
 
 ```
-### **Part 4 Regional Analysis**
-- (In this database theres no regional data)
 
-### **Part 5 Regional Analysis**
-
-**Electric Vehicle Market: With the rise of electric vehicles, discuss how this dataset reflects the growing demand and pricing trends for EVs compared to traditional fuel cars.**
-
-
-**Impact of Technology: Consider how advancements in technology, safety features, and autonomous driving capabilities might influence future pricing.**
-
-
-### **Part 6  Limitations of the Dataset**
-**Data Completeness: Discuss any potential limitations in the dataset, such as missing values or biases in the data collection process.**
-
-
-**Generalization: Reflect on the ability to generalize the findings from this dataset to broader car markets or regions. Are there potential confounding factors that should be considered?**
-
-### **Part 7 Potential Applications**
-
-**Pricing Strategies: How can dealerships or private sellers utilize insights from this dataset to set competitive pricing?**
-**Consumer Decision-Making: Discuss how consumers can leverage this dataset to make informed purchasing decisions based on price predictions and feature evaluations.**
 
 ## Challenges and Learnings
 
