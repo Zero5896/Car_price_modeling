@@ -11,6 +11,7 @@ This project tests my Data Science and Machine Learning skills using a [car data
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Analysis](#analysis)
 - [Installation](#installation)
 - [Challenges and Learnings](#challenges-and-learnings)
 - [Contributing](#contributing)
@@ -25,7 +26,7 @@ This project explores how various features, such as price, model, condition, mil
 - Answer key questions about car pricing trends.
 - Test the quality and usability of the dataset.
 
-**Analysis:**
+## Analysis
 - For this section I'll be answering the questions the dataset proposes
 ### **Part 1 Understanding the Features**
 
@@ -290,7 +291,26 @@ cd Car_price_modeling
 
 # Install the necessary dependencies
 pip install -r requirements.txt
+
 ```
+### **Part 4 Regional Analysis**
+- (In this database theres no regional data)
+
+### **Part 5 Regional Analysis**
+
+**Electric Vehicle Market: With the rise of electric vehicles, discuss how this dataset reflects the growing demand and pricing trends for EVs compared to traditional fuel cars.**
+
+
+**Impact of Technology: Consider how advancements in technology, safety features, and autonomous driving capabilities might influence future pricing.**
+
+
+### **Part 6  Limitations of the Dataset**
+**Data Completeness: Discuss any potential limitations in the dataset, such as missing values or biases in the data collection process.**
+
+
+**Generalization: Reflect on the ability to generalize the findings from this dataset to broader car markets or regions. Are there potential confounding factors that should be considered?**
+
+### **Part 7 Potential Applications**
 
 ## Challenges and Learnings
 
