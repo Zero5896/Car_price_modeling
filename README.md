@@ -265,6 +265,7 @@ sns.boxplot(df, y='Price', hue='Condition')
 plt.title('Boxplot of Car Prices by Condition')
 plt.savefig("results/pricesbycondition.png")
 ```
+![Prices by condition](results/pricesbycondition.png)
 
 ### **Part 4 Regional Analysis**
 - (In this database theres no regional data)
@@ -288,7 +289,7 @@ plt.savefig("results/pricesbycondition.png")
 **Pricing Strategies: How can dealerships or private sellers utilize insights from this dataset to set competitive pricing?**
 **Consumer Decision-Making: Discuss how consumers can leverage this dataset to make informed purchasing decisions based on price predictions and feature evaluations.**
 
-![Prices by condition](results/pricesbycondition.png)
+
 ## Features
 
 - Data Analysis and Understanding
