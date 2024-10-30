@@ -2,10 +2,15 @@
 
 <img src="https://rpmtechnik.co.uk/wp-content/uploads/porsche-930-turbo.jpg" alt="Cool Porsche 930 Turbo" width="350" height="200"/>
 
-
 ## Description
 
-This project tests my Data Science and Machine Learning skills using a [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer pricing-related questions posed by the dataset, assess its quality, and evaluate how useful it can be for building predictive models.
+This project tests my Data Science and Machine Learning skills using a [car dataset from Kaggle](https://www.kaggle.com/datasets/zafarali27/car-price-prediction/data). The main goal is to answer pricing-related questions posed by the dataset, assess its quality, and evaluate how useful it can be for building predictive models. 
+
+### Key Findings
+
+- **Influential Features**: I found that values like Mileage, Engine Size, and Model can be the most influential, but they don't guarantee a price or even a trend.
+- **Trend Observation**: The only trend I could barely see is that cars from the last 10 years tend to be cheaper than older cars.
+- **Modeling Suitability**: This database is not suitable for modeling either.
 
 
 ## Table of Contents
@@ -13,6 +18,7 @@ This project tests my Data Science and Machine Learning skills using a [car data
 - [Features](#features)
 - [Analysis](#analysis)
 - [Installation](#installation)
+- [Conclusion](#conclusion)
 - [Challenges and Learnings](#challenges-and-learnings)
 - [Contributing](#contributing)
 - [License](#license)
@@ -27,7 +33,13 @@ This project explores how various features, such as price, model, condition, mil
 - Test the quality and usability of the dataset.
 
 ## Analysis
-- For this section I'll be answering the questions the dataset proposes
+  - For this section I'll be answering the questions the dataset proposes
+    - [Part 1 Understanding the Features](#part-1-understanding-the-features)
+    - [Part 2 Prediction and Modeling](#part-2-prediction-and-modeling)
+    - [Part 3 Market Trends and Insights](#part-3-market-trends-and-insights)
+    - [Part 4 Regional Analysis](#part-4-regional-analysis)
+    - [Part 5 Future Developments and Trends](#part-5-future-developments-and-trends)
+
 ### **Part 1 Understanding the Features**
 
  **Brand and Model: Analyze how different brands and models influence car prices. Are luxury brands significantly more expensive than economy brands?**
@@ -271,7 +283,7 @@ plt.savefig("results/pricesbycondition.png")
 
 - **<span style="color:red">(In this database there's no regional data)</span>**
 
-### **Part 5  Future Developments and Trends**
+### **Part 5 Future Developments and Trends**
 
 **Electric Vehicle Market: With the rise of electric vehicles, discuss how this dataset reflects the growing demand and pricing trends for EVs compared to traditional fuel cars.**
 - There's no aparent difference between Fuel Type prices, therefore there's no clear trend by now
@@ -302,6 +314,12 @@ plt.savefig("results/AvgPriceYear.png")
 
 ```
 ![Avarage Car Price by Year](results/AvgPriceYear.png)
+
+
+## Conclusion
+
+This project provided valuable insights into the complexities of car pricing and highlighted the limitations of the dataset. While the predictive models underperformed, the analysis revealed significant features affecting prices, such as mileage, engine size, and brand. Future work could involve refining the dataset and exploring alternative modeling techniques to improve prediction accuracy.
+
 
 
 ## Features
