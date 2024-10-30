@@ -268,26 +268,40 @@ plt.savefig("results/pricesbycondition.png")
 ![Prices by condition](results/pricesbycondition.png)
 
 ### **Part 4 Regional Analysis**
-- (In this database theres no regional data)
 
-### **Part 5 Regional Analysis**
+- **<span style="color:red">(In this database there's no regional data)</span>**
+
+### **Part 5  Future Developments and Trends**
 
 **Electric Vehicle Market: With the rise of electric vehicles, discuss how this dataset reflects the growing demand and pricing trends for EVs compared to traditional fuel cars.**
-
-
+- There's no aparent difference between Fuel Type prices, therefore there's no clear trend by now
+```python
+# Set the width and height of the figure
+plt.figure(figsize=(16,6))
+sns.boxplot(df, y='Price', hue='Fuel Type')
+plt.title('Boxplot of Car Prices by Fuel Type')
+```
+![Is there a rising trend?](results/ElectricRisingTrend.png)
 **Impact of Technology: Consider how advancements in technology, safety features, and autonomous driving capabilities might influence future pricing.**
 
+- There's no aparent difference between Fuel Type prices, therefore there's no clear trend by now, tho there's a tiny trend of cars being less expensive from the last10 years
+```python
+# Set the width and height of the figure
+average_price_per_year = df.groupby('Year')['Price'].mean()
 
-### **Part 6  Limitations of the Dataset**
-**Data Completeness: Discuss any potential limitations in the dataset, such as missing values or biases in the data collection process.**
+# Plot the average price by year
+plt.figure(figsize=(12, 6))
+plt.plot(average_price_per_year.index, average_price_per_year.values, marker='o', color='skyblue')
+plt.title('Average Car Price by Year')
+plt.xlabel('Year')
+plt.ylabel('Average Price')
+plt.grid()
+plt.xticks(rotation=45)
+plt.show()
+plt.savefig("results/AvgPriceYear.png")
 
-
-**Generalization: Reflect on the ability to generalize the findings from this dataset to broader car markets or regions. Are there potential confounding factors that should be considered?**
-
-### **Part 7 Potential Applications**
-
-**Pricing Strategies: How can dealerships or private sellers utilize insights from this dataset to set competitive pricing?**
-**Consumer Decision-Making: Discuss how consumers can leverage this dataset to make informed purchasing decisions based on price predictions and feature evaluations.**
+```
+![Avarage Car Price by Year](results/AvgPriceYear.png)
 
 
 ## Features
